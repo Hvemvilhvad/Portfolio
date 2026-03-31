@@ -1,6 +1,7 @@
 body{
     background-color: #000000;
     padding-top: 50px;
+    margin: 0px;
 }
 
 #page{
@@ -12,6 +13,18 @@ body{
     background-image: linear-gradient(to right bottom, #dadeff, #919ac5, #cac9f7);
 }
 
+#detail_sheet_page{
+    display: none;
+
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    background: no-repeat center fixed;
+    background-image: linear-gradient(to right bottom, #dadeffab, #919ac4ab, #cac9f7ab);
+
+}
+
 .game_pic{
     width: 100%;
     border-top-left-radius: 15px;
@@ -20,19 +33,26 @@ body{
 }
 
 #me_pic{
-    width: 1000px;
+    width: 100%;
+    max-width: 1000px;
     border-radius: 45%;
 }
-
 
 #intro_box{
     /* background-color: rgb(229, 180, 124); */
     border-radius: 5px;
-    column-count: 2;
     padding: 15%;
     padding-top: 5%;
     padding-bottom: 5%;
+    width: 100%;
+    max-width: 2000px;
     justify-self: center;
+    
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas: 
+        "txt img";
+
 }
 
 #intro_box h1{
@@ -53,7 +73,8 @@ body{
 }
 
 #portfolio{
-    background-image: linear-gradient(to right bottom, #c0c0c01a, #33333379, #afafaf23);
+    /* background-image: linear-gradient(to right bottom, #c0c0c01a, #33333379, #afafaf23); */
+    background-color: #00000033;
     border-radius: 20px;
     /* row-gap: 2%; */
     /* padding-top: 50px; */
@@ -66,12 +87,6 @@ body{
     grid-template-areas: 
         "one two thr"
         "fou fiv six";
-    
-    /* grid-template-columns: auto auto;
-    grid-template-areas: 
-        "one two"
-        "thr fou"
-        "fiv six"; */
 
 
 
@@ -125,14 +140,14 @@ body{
     border-width: 3px;
     border-radius: 15px;
     border-color: #000000;
-    
+    width: 410px;
     margin: 25px;
-
-    /* padding: 5px; */
-
+    
     break-inside: avoid-column;
 
-    width: 410px;
+    cursor: pointer;
+
+
 }
 
 #pf_title{
@@ -147,16 +162,16 @@ body{
 
 .game_skills{
     justify-items: center;
-    column-count: 5;
+    /* column-count: 5; */
     color: #e7e7e7;
 }
 
 .skill_box{
-    /* background-color: #333333;
+    background-color: #333333;
     border-radius: 5px;
-    padding-left: 5%;
-    padding-right: 5%; */
-    padding: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding: 5px;
     text-wrap-mode: nowrap;
 }
 
@@ -197,4 +212,30 @@ body{
     border-bottom: 2px solid;
     border-color: #000000;
     justify-self: center;
+}
+
+
+#detail_sheet{
+    background-color: #1d1d1d;
+    border-style: solid;
+    border-radius: 15px;
+    border-width: 2px;
+    border-color: #000000;
+    box-shadow: 10px 10px 5px rgb(0, 0, 0);   
+    
+    padding: 10px;
+
+    justify-self: center;
+    break-inside: avoid-column;
+    height: 100%;
+    width: fit-content;
+    color: white;
+
+}
+
+#ds_image{
+    justify-self: center;
+    width: auto;
+    height: auto;
+    max-width: 100%;
 }

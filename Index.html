@@ -4,28 +4,30 @@
         <title>portfolio</title>
         <link rel="stylesheet" href="index.css">
     </head>
-    <body>
+    <body id = "body">
         <div id = "page">
             <!-- intro box thing -->
             <div id = "intro_box">
                 <!-- title line -->
-                <div>
-                    <h1>Hello, I'm <i>Malthe Birch</i></h1>
-                </div>
-                
-                <!-- describtor -->
-                <div id = "describtor">
-                    <h4>
-                        I'm an ambitious developer, with experience in <i>C#</i>, <i>C++</i>, <i>Python</i>, <i>React</i>, <i>HTML</i>, and much more.
-                        Scroll down to see some the things i've work on.
-                    </h4>
-                </div>
+                <div style="grid-area: txt">
 
-                <!-- image -->
-                <div>
-                    <!-- <img id = "me_pic" src="IMG_2823.JPG"> -->
-                    <img id = "me_pic" src="ColorBalanced.JPG">
+                    <div id = title>
+                        <h1>Hello, I'm <i>Malthe Birch</i></h1>
+                    </div>
+                    
+                    <!-- describtor -->
+                    <div  id = "describtor">
+                        <h4>
+                            I'm an ambitious developer, with experience in <i>C#</i>, <i>C++</i>, <i>Python</i>, <i>React</i> and much more.
+                            Scroll down to see some the things i've work on.
+                        </h4>
+                    </div>
                 </div>
+                    
+                <!-- image -->
+                 <div style="grid-area: img">
+                     <img id = "me_pic" src="ColorBalanced.png">
+                 </div>
             </div>
             
             <div class = "spacer"></div>
@@ -44,7 +46,8 @@
                     
                     <!-- Necrotroph -->
                     <div style="grid-area: one" class = "pf_game_spacer">
-                        <div class = "pf_game" onclick="location.href = 'https:\/\/github.com/Hargaflarb/Necrotroph'">
+                        <div class = "pf_game" onclick="ToggleDeatilSheet(0)">
+                             <!-- onclick="location.href = 'https:\/\/github.com/Hargaflarb/Necrotroph'" -->
                             <img class = "game_pic" src="Necrotroph1.png">
                             
                             <!-- textarea -->
@@ -58,11 +61,11 @@
                                 
                                 <!-- features and stuff -->
                                 <div class = "game_skills">
-                                    <div class = "skill_box">Horror</div>
-                                    <div class = "skill_box">Monogame</div>
-                                    <div class = "skill_box">HLSL</div>
-                                    <div class = "skill_box">AStar</div>
-                                    <div class = "skill_box">Team</div>
+                                    <span class = "skill_box">Horror</span>
+                                    <span class = "skill_box">Monogame</span>
+                                    <span class = "skill_box">HLSL</span>
+                                    <span class = "skill_box">AStar</span>
+                                    <span class = "skill_box">Team</span>
                                 </div>
                             </div>
                         </div>
@@ -70,7 +73,7 @@
 
                     <!-- Dungeon Crawler -->
                     <div style="grid-area: two" class = "pf_game_spacer">
-                        <div class = "pf_game">
+                        <div class = "pf_game" onclick="ToggleDeatilSheet(1)">
                             <img class = "game_pic" src="dungeon5.png">
                             
                             <!-- textarea -->
@@ -84,9 +87,9 @@
                                 
                                 <!-- features and stuff -->
                                 <div class = "game_skills">
-                                    <div class = "skill_box">C#</div>
-                                    <div class = "skill_box">Windows Forms</div>
-                                    <div class = "skill_box">Solo</div>
+                                    <span class = "skill_box">C#</span>
+                                    <span class = "skill_box">Windows Forms</span>
+                                    <span class = "skill_box">Solo</span>
                                 </div>
                             </div>
                         </div>
@@ -94,7 +97,7 @@
 
                     <!-- Unicorns Gaze -->
                     <div style="grid-area: thr" class = "pf_game_spacer">
-                        <div class = "pf_game" onclick="location.href = 'https:\/\/github.com/Hvemvilhvad/Unicorn-s-Gaze'"1>
+                        <div class = "pf_game" onclick="ToggleDeatilSheet(2)">
                             <img class = "game_pic" src="UnicornsGaze10.png">
                             
                             <!-- textarea -->
@@ -106,9 +109,9 @@
                                 
                                 <!-- features and stuff -->
                                 <div class = "game_skills">
-                                    <div class = "skill_box">C#</div>
-                                    <div class = "skill_box">Monogame</div>
-                                    <div class = "skill_box">Team</div>
+                                    <span class = "skill_box">C#</span>
+                                    <span class = "skill_box">Monogame</span>
+                                    <span class = "skill_box">Team</span>
                                 </div>
                             </div>
                         </div>
@@ -129,9 +132,9 @@
                                 
                                 <!-- features and stuff -->
                                 <!-- <div class = "game_skills">
-                                    <div class = "skill_box">C#</div>
-                                    <div class = "skill_box">Monogame</div>
-                                    <div class = "skill_box">Team</div>
+                                    <span class = "skill_box">C#</span>
+                                    <span class = "skill_box">Monogame</span>
+                                    <span class = "skill_box">Team</span>
                                 </div>
                             </div>
                         </div>
@@ -139,7 +142,7 @@
 
                     <!-- Ring Fighters -->
                     <div style="grid-area: fou" class = "pf_game_spacer">
-                        <div class = "pf_game" onclick="location.href = 'https:\/\/github.com/Hargaflarb/Ring-Fighter'">
+                        <div class = "pf_game" onclick="ToggleDeatilSheet(3)">
                             <img class = "game_pic" src="RingFighter3.png">
                             
                             <!-- textarea -->
@@ -152,9 +155,9 @@
                                 
                                 <!-- features and stuff -->
                                 <div class = "game_skills">
-                                    <div class = "skill_box">Python</div>
-                                    <div class = "skill_box">Pygame</div>
-                                    <div class = "skill_box">Team</div>
+                                    <span class = "skill_box">Python</span>
+                                    <span class = "skill_box">Pygame</span>
+                                    <span class = "skill_box">Team</span>
                                 </div>
                             </div>
                         </div>
@@ -162,7 +165,7 @@
 
                     <!-- Fossil Hunters -->
                     <div style="grid-area: fiv" class = "pf_game_spacer">
-                        <div class = "pf_game" onclick="location.href = 'https:\/\/github.com/Theaidable/FossilHunter'">
+                        <div class = "pf_game" onclick="ToggleDeatilSheet(4)">
                             <img class = "game_pic" src="FossilHunter5.png">
                             
                             <!-- textarea -->
@@ -176,10 +179,10 @@
                                 
                                 <!-- features and stuff -->
                                 <div class = "game_skills">
-                                    <div class = "skill_box">C#</div>
-                                    <div class = "skill_box">Unity</div>
-                                    <div class = "skill_box">Educational</div>
-                                    <div class = "skill_box">Scrum</div>
+                                    <span class = "skill_box">C#</span>
+                                    <span class = "skill_box">Unity</span>
+                                    <span class = "skill_box">Educational</span>
+                                    <span class = "skill_box">Scrum</span>
                                 </div>
                             </div>
                         </div>
@@ -207,6 +210,32 @@
             </div>
 
 
+        </div>
+
+        <div id = detail_sheet_page>
+            <img src="arrow.png" onclick="ToggleDeatilSheet()">
+            <div id = detail_sheet>
+                <div style="width: fit-content; justify-self: center;">
+                    <img id = "ds_image" src="Necrotroph1.png">
+                </div>
+                <div>
+                    <h1 id = "ds_header"><b>Necrotroph</b></h1>
+                    <p id = "ds_description">
+                        Wander through a dark forest to recollect your lost memories and pass on.
+                        But be wary, as the forest won't let you go just because you've died...
+                        Necrotroph uses the sounds and shadows to give you the feeling of being watched from the shadows.
+                    </p>
+                </div>
+                <!-- <div class="seperator" id="seperatorid"></div> -->
+                <div>
+                    <div>Language: <span id="ds_lang"></span></div>
+                    <div>Genre: <span id="ds_genr"></span></div>
+                    <div>Engine: <span id="ds_engi"></span></div>
+                    <div>Technology: <span id="ds_tech"></span></div>
+                    <div>Collaporators: <span id="ds_coop"></span></div>
+                    <a id="ds_githubLink" href="">Github</a>
+                </div>
+            </div>
         </div>
         <!-- <button id = "toggleBtn">toggle it</button> -->
         <script src="javascript.js"></script>
