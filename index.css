@@ -223,7 +223,7 @@ body{
     border-color: #000000;
     box-shadow: 10px 10px 5px rgb(0, 0, 0);   
     
-    padding: 10px;
+    /* padding: 10px; */
 
     justify-self: center;
     break-inside: avoid-column;
@@ -233,9 +233,37 @@ body{
 
 }
 
+#ds_image_area{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-areas: 
+        "lft img rgt";
+
+}
+
 #ds_image{
     justify-self: center;
     width: auto;
     height: auto;
     max-width: 100%;
+    max-height: 500px;
+}
+
+#ds_nxt_img_btn{
+    background-image: none;
+    background-color: #00000062;
+    height: 100%;
+    width: 20px;
+    border-radius: 0px;
+}
+
+#ds_text_area{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas: 
+        "des lst";
+}
+
+#ds_text_area p{
+    font-size: larger;
 }

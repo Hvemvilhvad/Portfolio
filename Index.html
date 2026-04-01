@@ -215,27 +215,33 @@
         <div id = detail_sheet_page>
             <img src="arrow.png" onclick="ToggleDeatilSheet()">
             <div id = detail_sheet>
-                <div style="width: fit-content; justify-self: center;">
-                    <img id = "ds_image" src="Necrotroph1.png">
+                <div id="ds_image_area" style="width: fit-content; justify-self: center;">
+                    <button style="grid-area: lft; border-top-left-radius: 15px;" class="ds_nxt_img_btn" onclick="ImageScrollLeft()">&lt;</button>
+                    <img style="grid-area: img; overflow-inline: clip;" id = "ds_image" src="Necrotroph1.png">
+                    <button style="grid-area: rgt; border-top-right-radius: 15px;" class="ds_nxt_img_btn" onclick="ImageScrollRight()">&gt;</button>
                 </div>
-                <div>
+
+                <div style="padding: 10px;">
                     <h1 id = "ds_header"><b>Necrotroph</b></h1>
-                    <p id = "ds_description">
-                        Wander through a dark forest to recollect your lost memories and pass on.
-                        But be wary, as the forest won't let you go just because you've died...
-                        Necrotroph uses the sounds and shadows to give you the feeling of being watched from the shadows.
-                    </p>
+                    <div id = ds_text_area>
+                        <span style="grid-area: des; padding: 10px;">
+                            <p id = "ds_description">
+                                Wander through a dark forest to recollect your lost memories and pass on.
+                                But be wary, as the forest won't let you go just because you've died...
+                                Necrotroph uses the sounds and shadows to give you the feeling of being watched from the shadows.
+                            </p>
+                        </span>
+                        <span style="grid-area: lst; padding: 10px;">
+                            <p>Language: <span class="ds_gategory" id="ds_lang"></span></p>
+                            <p>Genre: <span class="ds_gategory" id="ds_genr"></span></p>
+                            <p>Engine: <span class="ds_gategory" id="ds_engi"></span></p>
+                            <p>Technology: <span class="ds_gategory" id="ds_tech"></span></p>
+                            <p>Collaporators: <span class="ds_gategory" id="ds_coop"></span></p>
+                            <a id="ds_githubLink" href="">Github</a>
+                        </span>
+                    </div>
                 </div>
-                <!-- <div class="seperator" id="seperatorid"></div> -->
-                <div>
-                    <div>Language: <span id="ds_lang"></span></div>
-                    <div>Genre: <span id="ds_genr"></span></div>
-                    <div>Engine: <span id="ds_engi"></span></div>
-                    <div>Technology: <span id="ds_tech"></span></div>
-                    <div>Collaporators: <span id="ds_coop"></span></div>
-                    <a id="ds_githubLink" href="">Github</a>
                 </div>
-            </div>
         </div>
         <!-- <button id = "toggleBtn">toggle it</button> -->
         <script src="javascript.js"></script>

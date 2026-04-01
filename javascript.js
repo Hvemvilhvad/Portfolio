@@ -4,6 +4,15 @@ window.addEventListener('load', adjustSize, true);
 function adjustSize(){
     let width = this.window.innerWidth
     
+    if (width <= 500){
+        ds_text_area.style.gridTemplateAreas = '"des" "lst"';
+        ds_image_area.style.gridTemplateAreas = '"lft rgt" "img img"';
+    }
+    else{
+        ds_text_area.style.gridTemplateAreas = '"des lst"';
+        ds_image_area.style.gridTemplateAreas = '"lft img rgt"';
+    }
+
     if (width <= 950){
         portfolio.style.gridTemplateColumns = "auto";
         portfolio.style.gridTemplateAreas = '"one" "two" "thr" "fou" "fiv" "six"';
@@ -11,6 +20,7 @@ function adjustSize(){
         seperatorid.style.width = "500px";
         // intro_box.style.width = "500px";
         contacts.style.width = "500px";
+
     }
     else if (width <= 1425){
         portfolio.style.gridTemplateColumns = "auto auto";
@@ -40,7 +50,6 @@ function adjustSize(){
 }
 
 
-let viewingDetailSheet = false;
 function ToggleDeatilSheet(index){
     // to page
     if (viewingDetailSheet){
@@ -53,6 +62,8 @@ function ToggleDeatilSheet(index){
         page.style.display = "none";
         detail_sheet_page.style.display = "block";
         body.style.paddingTop = "0px"
+        dsImageIndex = 0;
+        dsGameIndex = index;
         SetDetailSheetData(index);
     }
     viewingDetailSheet = !viewingDetailSheet;
@@ -63,7 +74,7 @@ function ToggleDeatilSheet(index){
 function SetDetailSheetData(index){
     ds_header.textContent = gameData[index].title;
     ds_description.textContent = gameData[index].description;
-    ds_image.src = gameData[index].images[0];
+    ds_image.src = gameData[index].images[dsImageIndex];
     ds_lang.textContent = gameData[index].language;
     ds_genr.textContent = gameData[index].genre;
     ds_engi.textContent = gameData[index].engine;
@@ -73,7 +84,26 @@ function SetDetailSheetData(index){
 }
 
 
+function ImageScrollRight(){
+    dsImageIndex += 1;
+    if (dsImageIndex >= gameData[dsGameIndex].images.length){
+        dsImageIndex = 0;
+    }
+    ds_image.src = gameData[dsGameIndex].images[dsImageIndex];
+}
 
+function ImageScrollLeft(){
+    dsImageIndex -= 1;
+    if (dsImageIndex < 0){
+        dsImageIndex = gameData[dsGameIndex].images.length-1;
+    }
+    ds_image.src = gameData[dsGameIndex].images[dsImageIndex];
+}
+
+
+let viewingDetailSheet = false;
+let dsImageIndex = 0;
+let dsGameIndex = 0;
 let gameData =
 [
     {
@@ -83,8 +113,8 @@ let gameData =
         language: ["C#", "HLSL"],
         genre: "Horror",
         engine: "MonoGame",
-        technology: ["Shaders", "Pathfinding"], 
-        collaporators: ["Emma","Ellie","Malthe"],
+        technology: ["Shaders", " Pathfinding"], 
+        collaporators: ["Emma Brøcher"," Ellie Rasmussen"," Malthe Birch"],
         link: "https:\/\/github.com/Hargaflarb/Necrotroph"
     },
     {
@@ -94,7 +124,7 @@ let gameData =
         language: ["C#"],
         genre: "Dungeon Crawler",
         engine: "None/Own",
-        technology: ["procedural generation"],
+        technology: ["Procedural Generation"],
         collaporators: ["Malthe"],
         link: "https:\/\/github.com/"
     },
@@ -106,18 +136,18 @@ let gameData =
         genre: "Beat-'em-up",
         engine: "MonoGame",
         technology: [], 
-        collaporators: ["Emma","Ellie","Malthe"],
+        collaporators: ["Emma Brøcher"," Ellie Rasmussen"," Malthe Birch"],
         link: "https:\/\/github.com/Hvemvilhvad/Unicorn-s-Gaze"
     },
     {
         title: "Ring Figther",
         description: "A Street Figher inspired game, with stop-motion animations and an 16-bit vibe.\nUse the different moves to avoid, counter and combo the enemy, pushing them closer and closer to the edge.",
-        images: ["RingFighter3.png","RingFighter2.png","RingFighter1.png"],
+        images: ["RingFighter3.png","RingFighter4.png"],
         language: ["Python"],
         genre: "Fighter",
         engine: "Pygame",
         technology: ["Behavioral AI"], 
-        collaporators: ["Emma","Ellie","Malthe"],
+        collaporators: ["Emma Brøcher"," Ellie Rasmussen"," Malthe Birch"],
         link: "https:\/\/github.com/Hargaflarb/Ring-Fighter"
     },
     {
@@ -127,8 +157,8 @@ let gameData =
         language: ["C#",],
         genre: "Educational Sim",
         engine: "Unity",
-        technology: ["Spritemasks", "Scrum-Framework"], 
-        collaporators: ["Emma","Ellie","David","Asbjørn","Malthe"],
+        technology: ["Spritemasks", " Scrum-Framework"], 
+        collaporators: ["Emma Brøcher"," Ellie Rasmussen"," David Danielsen"," Asbjørn Ryberg"," Malthe Birch"],        
         link: "https:\/\/github.com/Theaidable/FossilHunter"
     },
     
