@@ -109,7 +109,7 @@ let gameData =
     {
         title: "Necrotroph",
         description: "Wander through a dark forest to recollect your lost memories and pass on. \nBut be wary, as the forest won't let you go just because you've died... \nNecrotroph uses the sounds and shadows to give you the feeling of being watched from the shadows.",
-        images: ["Necrotroph1.png","Necrotroph2.png"],
+        images: ["Necrotroph/Necrotroph1.png","Necrotroph/Necrotroph4.png","Necrotroph/Necrotroph5.png","Necrotroph/Necrotroph6.png","Necrotroph/Necrotroph7.png"],
         language: ["C#", "HLSL"],
         genre: "Horror",
         engine: "MonoGame",
@@ -120,7 +120,7 @@ let gameData =
     {
         title: "Unnamed",
         description: "An unnamed, unfinished dungeon crawler made as a hobby project.\nThe player traverses procedurally generated rooms, finding chests and fighting monsters for looting to sell and craft into better weapons.\nThe game is build with a homemade engine using windows forms as a base.",
-        images: ["dungeon5.png","dungeon1.png"],
+        images: ["dungeon/dungeon5.png","dungeon/dungeon6.png","dungeon/dungeon3.png","dungeon/dungeon3.png"],
         language: ["C#"],
         genre: "Dungeon Crawler",
         engine: "None/Own",
@@ -131,7 +131,7 @@ let gameData =
     {
         title: "Unicorns Gaze",
         description: "A Beat-'em-up side-scroller, where you use your unicorn horn as well as the environment to beat up candy creatures.",
-        images: ["UnicornsGaze10.png","UnicornsGaze8.png"],
+        images: ["UnicornsGaze/UnicornsGaze10.png","UnicornsGaze/UnicornsGaze9.png","UnicornsGaze/UnicornsGaze7.png","UnicornsGaze/UnicornsGaze5.png","UnicornsGaze/UnicornsGaze4.png"],
         language: ["C#"],
         genre: "Beat-'em-up",
         engine: "MonoGame",
@@ -142,7 +142,7 @@ let gameData =
     {
         title: "Ring Figther",
         description: "A Street Figher inspired game, with stop-motion animations and an 16-bit vibe.\nUse the different moves to avoid, counter and combo the enemy, pushing them closer and closer to the edge.",
-        images: ["RingFighter3.png","RingFighter4.png"],
+        images: ["RingFighter/RingFighter3.png","RingFighter/RingFighter2.png","RingFighter/RingFighter1.png"],
         language: ["Python"],
         genre: "Fighter",
         engine: "Pygame",
@@ -153,7 +153,7 @@ let gameData =
     {
         title: "Fossil Hunter",
         description: "An educational game, made to teach kids about how and where fossils are made and found.\nFossils are dug up, cleaned and then displayed in the players collection.\nThe game was developed in Unity, using the Scrum framework to organize the process.",
-        images: ["FossilHunter5.png","FossilHunter4.png"],
+        images: ["FossilHunter/FossilHunter5.png","FossilHunter/FossilHunter4.png","FossilHunter/FossilHunter3.png","FossilHunter/FossilHunter1.png","FossilHunter/FossilHunter6.png",],
         language: ["C#",],
         genre: "Educational Sim",
         engine: "Unity",
@@ -161,5 +161,15 @@ let gameData =
         collaporators: ["Emma Brøcher"," Ellie Rasmussen"," David Danielsen"," Asbjørn Ryberg"," Malthe Birch"],        
         link: "https:\/\/github.com/Theaidable/FossilHunter"
     },
-    
+    {
+        title: "Astar",
+        description: "A console project i made, that uses the Astar algorithm to pathfind from A to B.\nEdges can be given weights to alter priotization. It also has 'AwayStar',\nan algorithm based on Astar that pathfinds away from a point.",
+        images: ["Astar/Astar2.png","Astar/Astar3.png","Astar/Astar4.png","Astar/Astar5.png","Astar/Astar6.png"],
+        language: ["C#",],
+        genre: "Sim",
+        engine: "None",
+        technology: ["Astar"], 
+        collaporators: ["Malthe Birch"],        
+        link: "https:\/\/github.com/"
+    },
 ];
