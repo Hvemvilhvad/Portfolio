@@ -115,7 +115,7 @@ let gameData =
         engine: "MonoGame",
         technology: ["Shaders", " Pathfinding"], 
         collaporators: ["Emma Brøcher"," Ellie Rasmussen"," Malthe Birch"],
-        link: "https:\/\/github.com/Hargaflarb/Necrotroph"
+        link: "https://github.com/Hargaflarb/Necrotroph"
     },
     {
         title: "Unnamed",
@@ -126,7 +126,7 @@ let gameData =
         engine: "None/Own",
         technology: ["Procedural Generation"],
         collaporators: ["Malthe"],
-        link: "https:\/\/github.com/"
+        link: "https://github.com/"
     },
     {
         title: "Unicorns Gaze",
@@ -137,7 +137,7 @@ let gameData =
         engine: "MonoGame",
         technology: [], 
         collaporators: ["Emma Brøcher"," Ellie Rasmussen"," Malthe Birch"],
-        link: "https:\/\/github.com/Hvemvilhvad/Unicorn-s-Gaze"
+        link: "https://github.com/Hvemvilhvad/Unicorn-s-Gaze"
     },
     {
         title: "Ring Figther",
@@ -148,7 +148,7 @@ let gameData =
         engine: "Pygame",
         technology: ["Behavioral AI"], 
         collaporators: ["Emma Brøcher"," Ellie Rasmussen"," Malthe Birch"],
-        link: "https:\/\/github.com/Hargaflarb/Ring-Fighter"
+        link: "https://github.com/Hargaflarb/Ring-Fighter"
     },
     {
         title: "Fossil Hunter",
@@ -159,7 +159,7 @@ let gameData =
         engine: "Unity",
         technology: ["Spritemasks", " Scrum-Framework"], 
         collaporators: ["Emma Brøcher"," Ellie Rasmussen"," David Danielsen"," Asbjørn Ryberg"," Malthe Birch"],        
-        link: "https:\/\/github.com/Theaidable/FossilHunter"
+        link: "https://github.com/Theaidable/FossilHunter"
     },
     {
         title: "Astar",
@@ -170,6 +170,6 @@ let gameData =
         engine: "None",
         technology: ["Astar"], 
         collaporators: ["Malthe Birch"],        
-        link: "https:\/\/github.com/"
+        link: "https://github.com/Hvemvilhvad/AStar"
     },
 ];
