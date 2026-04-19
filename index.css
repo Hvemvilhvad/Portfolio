@@ -86,7 +86,8 @@ body{
     grid-template-columns: auto auto auto;
     grid-template-areas: 
         "one two thr"
-        "fou fiv six";
+        "fou fiv six"
+        "sev eig nin";
 
 
 

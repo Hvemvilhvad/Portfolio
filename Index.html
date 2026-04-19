@@ -18,7 +18,8 @@
                     <!-- describtor -->
                     <div  id = "describtor">
                         <h4>
-                            I'm an ambitious developer, with experience in <i>C#</i>, <i>C++</i>, <i>Python</i>, <i>React</i> and much more.
+                            I'm an ambitious developer, with experience in <i>C#</i>, <i>C++</i>, <i>Python</i>, <i>Javascript</i> and <i>HLSL</i>.
+                            Which i've used in <i>Unreal Engine</i>, <i>Unity</i>, <i>Monogame</i>, <i>Pygame</i>, <i>React</i>.
                             Scroll down to see some the things i've work on.
                         </h4>
                     </div>
@@ -165,7 +166,7 @@
                         </div>
                     </div>
 
-                    <!-- Fossil Hunters -->
+                    <!-- AStar -->
                     <div style="grid-area: six" class = "pf_game_spacer">
                         <div class = "pf_game" onclick="ToggleDeatilSheet(5)">
                             <img class = "game_pic" src="Astar/Astar2.png">
@@ -190,9 +191,54 @@
                         </div>
                     </div>
 
+                    <!-- Solitair -->
+                    <div style="grid-area: sev" class = "pf_game_spacer">
+                        <div class = "pf_game" onclick="ToggleDeatilSheet(6)">
+                            <img class = "game_pic" src="Solitair/Solitair2.png">
+                            
+                            <!-- textarea -->
+                            <div class = "game_text_area"> 
+                                <div class = "game_header"><b>Solitair</b></div>
+                                <p>
+                                    A simple engine/framework for development of solitair-games.
+                                    The framework makes it easy to define the games setup, stacking rules and win conditions.
+                                    Currently, both klondike and spider are implemented.
+                                </p>
+                                
+                                <!-- features and stuff -->
+                                <div class = "game_skills">
+                                    <span class = "skill_box">C#</span>
+                                    <span class = "skill_box">Console</span>
+                                    <span class = "skill_box">Solo</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- LinkedList -->
+                    <div style="grid-area: eig" class = "pf_game_spacer">
+                        <div class = "pf_game" onclick="ToggleDeatilSheet(7)">
+                            <img class = "game_pic" src="LinkedList/LinkedListCode1.png">
+                            
+                            <!-- textarea -->
+                            <div class = "game_text_area"> 
+                                <div class = "game_header"><b>LinkedList</b></div>
+                                <p>
+                                    A simple double-linked list. Because i don't have any finished c++ projects yet,
+                                    i made this as a fun little temporary project.
+                                </p>
+
+                                <!-- features and stuff -->
+                                <div class = "game_skills">
+                                    <span class = "skill_box">C++</span>
+                                    <span class = "skill_box">Console</span>
+                                    <span class = "skill_box">Small</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
-                
             </div>
 
             <div class = "spacer"></div>
@@ -220,7 +266,7 @@
             <div id = detail_sheet>
                 <div id="ds_image_area" style="width: fit-content; justify-self: center;">
                     <button style="grid-area: lft; border-top-left-radius: 15px;" class="ds_nxt_img_btn" onclick="ImageScrollLeft()">&lt;</button>
-                    <img style="grid-area: img; overflow-inline: clip;" id = "ds_image" src="Necrotroph1.png">
+                    <img style="grid-area: img; overflow-inline: clip;" id = "ds_image" src="">
                     <button style="grid-area: rgt; border-top-right-radius: 15px;" class="ds_nxt_img_btn" onclick="ImageScrollRight()">&gt;</button>
                 </div>
 
@@ -229,11 +275,13 @@
                     <div id = ds_text_area>
                         <span style="grid-area: des; padding: 10px;">
                             <p id = "ds_description">
-                                Wander through a dark forest to recollect your lost memories and pass on.
-                                But be wary, as the forest won't let you go just because you've died...
-                                Necrotroph uses the sounds and shadows to give you the feeling of being watched from the shadows.
                             </p>
                         </span>
+                        <span style="grid-area: wrk; padding: 10px;">
+                            <h3>The parts i worked on:</h3>
+                            <p id = "ds_worked_on">
+                            </p>
+                        </span>                        
                         <span style="grid-area: lst; padding: 10px;">
                             <p>Language: <span class="ds_gategory" id="ds_lang"></span></p>
                             <p>Genre: <span class="ds_gategory" id="ds_genr"></span></p>
@@ -244,9 +292,9 @@
                         </span>
                     </div>
                 </div>
-                </div>
+            </div>
         </div>
-        <!-- <button id = "toggleBtn">toggle it</button> -->
+
         <script src="javascript.js"></script>
     </body>
 </html>
